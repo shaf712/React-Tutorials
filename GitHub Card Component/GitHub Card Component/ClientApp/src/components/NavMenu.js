@@ -38,6 +38,11 @@ export class NavMenu extends Component {
                 <Glyphicon glyph='th-list' /> GitHub Cards 
               </NavItem>
             </LinkContainer>
+            <LinkContainer to={'/todo'}>
+              <NavItem>
+                <Glyphicon glyph='th-list' /> TODO List
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
