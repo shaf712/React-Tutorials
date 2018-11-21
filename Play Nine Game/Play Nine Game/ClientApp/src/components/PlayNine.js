@@ -2,7 +2,7 @@
 
 
 const Stars = (props) => {
-    const NumOfStars = Math.random() * 9; 
+    const NumOfStars = 1+ Math.floor(Math.random() * 9); 
     let stars = [] 
     for (let i = 0; i < NumOfStars; i++)
     {
