@@ -2,9 +2,10 @@
 
 
 const Stars = (props) => {
-    const NumOfStars = 5; 
+    const NumOfStars = Math.random() * 9; 
     let stars = [] 
-    for (let i = 0; i < NumOfStars; i++) {
+    for (let i = 0; i < NumOfStars; i++)
+    {
         stars.push(<span key={i} className="stars">+</span>)
     }
         return (
