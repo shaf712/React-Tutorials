@@ -1,2 +1,2 @@
-# React-Tutorials
-Based on the React Playlists from Pluralsight
+# ReactJS-Tutorials
+Based on the ReactJS Playlists from Pluralsight by Samer Buna
