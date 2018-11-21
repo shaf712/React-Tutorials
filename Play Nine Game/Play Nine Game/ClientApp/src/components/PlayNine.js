@@ -18,12 +18,19 @@ const Stars = (props) => {
 }
 
 const NumbersList = (props) => {
+    const numberList = []
+
+    //Functional components such as these CANNOT have methods 
+
+    for (let i = 1; i < 10; i++)
+    {
+        numberList.push(<span className="numbersStyle">{i}</span>); 
+    }
+
         return (
             <div className="card text-center">
                 <div>
-                    <span className="numbersStyle">1</span>
-                    <span className="numbersStyle">2</span>
-                    <span className="numbersStyle">3</span>
+                    {numberList}
                 </div>
             </div>
         )
@@ -56,6 +63,15 @@ export class Redraw extends React.Component {
 }
 
 export class GameBoard extends React.Component {
+    state = { selectedNumbers: [] };
+    //TASK 1: Figure out how to push a number to this array on click 
+    //TASK 2: Figure out what the UI will do based on the numbers stored in this array
+    //
+
+    ShowAlert = () => {
+        console.log('alert')
+    }
+
     render() {
         return (
             <div className="container">
