@@ -1,25 +1,22 @@
 ﻿import React from 'react';
 
 
-export class Stars extends React.Component {
-    state = {}
-    render() {
+const Stars = (props) => {
+    const NumOfStars = 5; 
+    let stars = [] 
+    for (let i = 0; i < NumOfStars; i++) {
+        stars.push(<span key={i} className="stars">+</span>)
+    }
         return (
             <div>
-            <span className="col-5">
-                <span className="stars">+</span>
-                <span className="stars">+</span>
-                <span className="stars">+</span>
-                <span className="stars">+</span>
-               </span>
+                <span className="col-5">
+                    {stars}
+                </span>
             </div>    
         )
-    }
 }
 
-export class NumbersList extends React.Component {
-    state = { num_list : [1, 2, 3, 4, 5, 6, 7, 8, 9] }
-    render() {
+const NumbersList = (props) => {
         return (
             <div className="card text-center">
                 <div>
@@ -29,7 +26,6 @@ export class NumbersList extends React.Component {
                 </div>
             </div>
         )
-    }
 }
 
 export class Answer extends React.Component {
@@ -40,15 +36,13 @@ export class Answer extends React.Component {
     }
 }
 
-export class Checker extends React.Component {
-    state = {}
-    render() {
+const Checker = (props) => {
+
         return (
             <div className="col-2 center">
                 <center><button> = </button></center>
             </div>
         )
-    }
 }
 
 export class Redraw extends React.Component {
