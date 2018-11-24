@@ -12,24 +12,24 @@ export class NavMenu extends React.Component<{}, {}> {
                         <span className='icon-bar'></span>
                         <span className='icon-bar'></span>
                     </button>
-                    <Link className='navbar-brand' to={ '/' }>React_and_Redux_in_ES6</Link>
+                    <Link className='navbar-brand' to={ '/' }>Pluralsight Administration</Link>
                 </div>
                 <div className='clearfix'></div>
                 <div className='navbar-collapse collapse'>
                     <ul className='nav navbar-nav'>
                         <li>
                             <NavLink exact to={ '/' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
+                                <span></span> Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/counter' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Counter
+                            <NavLink exact to={'/about'} activeClassName='active'>
+                                <span></span> About
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/fetchdata' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Fetch data
+                            <NavLink exact to={'/courses'} activeClassName='active'>
+                                <span></span> Courses
                             </NavLink>
                         </li>
                     </ul>
