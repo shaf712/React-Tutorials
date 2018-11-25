@@ -55,7 +55,7 @@ export class Input extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        let newTask = this.state.input
+        let newTask = this.state.input  
         this.props.onClickSubmission(newTask)
         this.setState(previousState => ({
             input: ''
