@@ -1,6 +1,8 @@
-﻿ export function createTask(task) {
+﻿import * as types from './actionTypes'; 
+
+export function createTask(task) {
      console.log('here is the task: ', task); 
-     return { type: 'CREATE_TASK', task }
+     return { type: types.CREATE_COURSE, task }
  }
 
 //export const createTask = taskData => dispatch => {

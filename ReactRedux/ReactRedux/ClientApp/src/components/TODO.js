@@ -55,6 +55,12 @@ class TODO extends Component {
 
 }
 
+
+TODO.propTypes = {
+    createTask: PropTypes.func.isRequired
+};
+
+
 function mapStateToProps(state, ownProps) {
     console.log('this is the STATE: ', state); 
     console.log('MAPPING STATE TO PROPS!'); 
@@ -72,8 +78,5 @@ function mapStateToProps(state, ownProps) {
      }; 
  }
 
-TODO.propTypes = {
-    createTask: PropTypes.func.isRequired
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(TODO); 
