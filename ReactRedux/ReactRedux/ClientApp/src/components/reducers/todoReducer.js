@@ -7,6 +7,8 @@ export default function (state = [], action) {
             console.log('creating task') 
             console.log('action task: ', action.task); 
             return [...state, Object.assign({}, action.task)];
+        case types.LOAD_COURSES_SUCCESS:
+            return action.courses; 
         default:
             console.log('reducer state') 
             return state;

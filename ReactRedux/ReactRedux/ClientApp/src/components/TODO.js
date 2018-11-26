@@ -2,53 +2,30 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'; 
 import { createTask } from '../components/actions/todoActions';
+import courseList from './courseList';
+import CourseList from './courseList';
+
 
 class TODO extends Component {
     constructor(props) {
         super(props); 
 
-        this.state = {
-            task: { name: '', body: '' }
-        }; 
-
-        this.onNameChange = this.onNameChange.bind(this);
-        this.onBodyChange = this.onBodyChange.bind(this); 
-        this.onClickSave = this.onClickSave.bind(this); 
+        //this.state = {
+        //    task: { name: '', body: '' }
+        //}; 
     }
 
-    onNameChange(e) {
-        console.log('name change')
-        let task = this.state.task;
-        task.name = e.target.value;
-        this.setState({ task: task });
-    }
-
-    onBodyChange(e) {
-        console.log('body change')
-        let task = this.state.task; 
-        task.body = e.target.value; 
-        this.setState({ task: task });
-    }
-
-    onClickSave = (e) => {
-        this.props.createTask(this.state.task); 
-    }; 
-
-    todoRow(task, index) {
-        return <div key={index}>{task.name}, {task.body}</div>;
+    courseRow(course, index) {
+        return <div key={index}>{course.title}</div>;
     }
 
     render() {
+
         return (
             <div>
-                <h1>TODO List: </h1>
-                <hr /> 
-                <h4>Add TODO</h4>
-                <input type="text" onChange={this.onNameChange} placeholder="Name" name="name" value={this.state.task.name} />
-                <input type="text" onChange={this.onBodyChange} placeholder="Description" name="body" value={this.state.task.body} />
-                <input type="submit" value="Add task" onClick={this.onClickSave} />
+                <h1>Courses List: </h1>
                 <hr />
-                {this.props.tasks.map(this.todoRow)}
+                <CourseList courses={this.props.courses} />
             </div>
             )
     }
@@ -62,10 +39,8 @@ TODO.propTypes = {
 
 
 function mapStateToProps(state, ownProps) {
-    console.log('this is the STATE: ', state); 
-    console.log('MAPPING STATE TO PROPS!'); 
     return {
-        tasks: state.todos
+        courses: state.courses
     }
 }
 
@@ -77,6 +52,5 @@ function mapStateToProps(state, ownProps) {
          }
      }; 
  }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(TODO); 

@@ -9,12 +9,14 @@
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-redux": "^5.1.1",
+    "react-router": "^4.3.1",
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "webstorm": "^1.0.0"
   },
   "scripts": {
     "start": "rimraf ./build && react-scripts start",

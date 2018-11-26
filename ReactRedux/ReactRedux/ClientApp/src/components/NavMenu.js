@@ -12,7 +12,7 @@ export class NavMenu extends Component {
       <Navbar inverse fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to={'/'}>TODO List using React + Redux</Link>
+            <Link to={'/'}>Courses List using React + Redux</Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -20,7 +20,12 @@ export class NavMenu extends Component {
           <Nav>
             <LinkContainer to={'/'} exact>
               <NavItem>
-                <Glyphicon glyph='home' /> TODO List
+                <Glyphicon glyph='home' /> Courses List
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/manage-courses'} exact>
+              <NavItem>
+                <Glyphicon glyph='home' /> Manage Courses
               </NavItem>
             </LinkContainer>
           </Nav>
