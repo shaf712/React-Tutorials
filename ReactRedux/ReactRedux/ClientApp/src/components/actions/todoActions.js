@@ -18,6 +18,22 @@ export function loadCoursesSuccess(courses) {
     return { type: types.LOAD_COURSES_SUCCESS, courses }
 }
 
+export function updateCourseSuccess(course) {
+    return { type: types.UPDATE_COURSE_SUCCESS, course }
+}
+
+export function createCourseSuccess(course) {
+    return { type: types.CREATE_COURSE_SUCCESS, course }
+}
+
+export function SaveCourse(course) {
+    console.log('save action called: ', course);
+    return function (dispatch, getState) {
+        return courseApi.saveCourse(course).then(savedCourse => {
+            course.id ? dispatch(updateCourseSuccess(savedCourse)) : dispatch(createCourseSuccess(savedCourse));
+        })
+    }
+}
 //export const createTask = taskData => dispatch => {
 //   debugger; 
 //   console.log('creating task!') 

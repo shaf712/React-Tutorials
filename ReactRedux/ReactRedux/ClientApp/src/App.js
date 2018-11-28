@@ -15,6 +15,7 @@ export default class App extends Component {
       <Layout>
         <Route exact path='/' component={TODO} />
         <Route path='/manage-courses' component={ManageCourses} />
+        <Route path='/course/:id' component={ManageCourses} />
       </Layout>
       </Provider>
     );

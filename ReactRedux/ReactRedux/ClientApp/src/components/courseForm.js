@@ -3,7 +3,7 @@ import TextInput from './common/TextInput';
 import SelectInput from './common/selectInput';
 
 const CourseForm = ({ course, allAuthors, onSave, onChange, saving, errors }) => {
-    console.log('all authors:', allAuthors); 
+    console.log('this is the course: ', course); 
     return (
         <form>
             <TextInput
